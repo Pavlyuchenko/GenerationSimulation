@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Generation Simulation | Alt/Pop duo based in Austin, TX</title>
+        <link rel="stylesheet" href="styles/index.css" />
+        <link rel="stylesheet" href="styles/base.css" />
+
+        <link rel="icon" href="/static/gensim_logo.png" type="image/png" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <nav>
+            <a href="/music.html">Music</a>
+            <a href="/shows.html" class="active">Shows</a>
+            <a href="/index.html">
+                <img
+                    src="/static/gensim_logo_big.png"
+                    alt="Generation Simulation Logo"
+                    width="120px"
+                    height="120px"
+                />
+            </a>
+            <a
+                href="https://www.instagram.com/generationsimulation/"
+                target="_blank"
+                >Insta</a
+            >
+            <a href="/about.html">About</a>
+        </nav>
+        <main>
+            <h1>GENERATION<br />SIMULATION</h1>
+            <p>Alt/Pop duo based in Austin, TX</p>
+
+            <div class="grid">
+                <div class="img-wrapper">
+                    <img
+                        src="static/this_again.png"
+                        alt="Song Oh No Is It This Again?"
+                    />
+                    <div onClick="showPopUp(0)">
+                        <img
+                            src="static/play.png"
+                            alt="Play Button"
+                            class="play-button"
+                        />
+                    </div>
+                </div>
+                <div class="img-wrapper">
+                    <img
+                        src="static/half_robotic.png"
+                        alt="Song Half Robotic"
+                    />
+                    <div onclick="showPopUp(1)">
+                        <img
+                            src="static/play.png"
+                            alt="Play Button"
+                            class="play-button"
+                        />
+                    </div>
+                </div>
+                <div class="img-wrapper">
+                    <img src="static/true_colors.png" alt="Song True Colors" />
+                    <div onclick="showPopUp(2)">
+                        <img
+                            src="static/play.png"
+                            alt="Play Button"
+                            class="play-button"
+                        />
+                    </div>
+                </div>
+            </div>
+
+            <h2 data-alttext="Make Your Point">Make Your Point</h2>
+            <p id="new-single">New Single - Out Now!</p>
+
+            <div class="flex">
+                <img
+                    src="static/make_your_point.png"
+                    alt="Make Your Point cover"
+                    width="400px"
+                />
+                <div>
+                    <a
+                        href="https://open.spotify.com/track/6lxMY6yvXze9s1mFL6mIfk?si=0c08f66834724fd6"
+                        target="_blank"
+                    >
+                        <img
+                            src="static/listenonspotify.png"
+                            alt="Listen On Spotify"
+                            width="200px"
+                        />
+                    </a>
+                    <a
+                        href="https://music.youtube.com/watch?v=3mgQDqpbEkw&feature=share"
+                        target="_blank"
+                    >
+                        <img
+                            src="static/youtube_music.png"
+                            alt="Youtube Music"
+                            width="200px"
+                        />
+                    </a>
+                    <a
+                        href="https://music.amazon.com/albums/B0C1316DDV?marketplaceId=A3K6Y4MI8GDYMT&musicTerritory=BE&ref=dm_sh_HPLhkbAC0EGLcjzQZt573XW5h&trackAsin=B0C12NQDJ7"
+                        target="_blank"
+                    >
+                        <img
+                            src="static/amazon_music.png"
+                            alt="Amazon Music"
+                            width="200px"
+                        />
+                    </a>
+                    <a
+                        href="https://music.apple.com/us/album/make-your-point/1680184462?i=1680184463"
+                        target="_blank"
+                    >
+                        <img
+                            src="static/apple_music.webp"
+                            alt="Apple Music"
+                            width="200px"
+                        />
+                    </a>
+                </div>
+            </div>
+
+            <h2 data-alttext="Upcoming Shows">Upcoming Shows</h2>
+            <p>No upcoming shows...</p>
+
+            <div id="pop-up">
+                <iframe
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    id="pop-up-iframe"
+                ></iframe>
+            </div>
+
+            <img
+                src="/static/gensim_no_bg.png"
+                alt="Generation Simulation logo"
+                id="bot-logo"
+            />
+        </main>
+        <script>
+            var youtubeURLs = [
+                "https://www.youtube-nocookie.com/embed/YiT0txtq9yw",
+                "https://www.youtube-nocookie.com/embed/1flqdEkfgKg",
+                "https://www.youtube-nocookie.com/embed/nAA2vJJvlOM",
+            ];
+
+            function showPopUp(index) {
+                document.getElementById("pop-up").style.display = "flex";
+                document.getElementById("pop-up-iframe").src =
+                    youtubeURLs[index];
+
+                /* Get device width and height */
+                var width = window.innerWidth;
+                var height = window.innerHeight;
+
+                if (width > height) {
+                    document.getElementById("pop-up-iframe").style.width =
+                        "75vw";
+                    document.getElementById("pop-up-iframe").style.height =
+                        "75vh";
+                } else {
+                    document.getElementById("pop-up-iframe").style.width =
+                        "90vw";
+                    document.getElementById("pop-up-iframe").style.height =
+                        width * 0.9 * 0.5625 + "px";
+                }
+
+                /* On click pop-up, which is not pop-up-iframe, close */
+                document
+                    .getElementById("pop-up")
+                    .addEventListener("click", function (event) {
+                        if (event.target !== this) return;
+                        document.getElementById("pop-up").style.display =
+                            "none";
+                        document.getElementById("pop-up-iframe").src = "";
+                    });
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,112 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 50px max(calc((100% - 50rem) / 2), 25px) 100px
+        max(calc((100% - 50rem) / 2), 25px);
+}
+
+h1 {
+    color: var(--primary);
+    font-size: clamp(3rem, 9vw, 4.5rem);
+    font-weight: 700;
+
+    -webkit-text-stroke-width: clamp(2px, 0.6vw, 3px);
+    -webkit-text-stroke-color: black;
+
+    position: relative;
+    display: inline;
+    text-align: center;
+
+    line-height: 0.9em;
+
+    z-index: 1;
+}
+h1::before {
+    content: "About";
+    text-align: center;
+    white-space: pre;
+
+    position: absolute;
+    top: clamp(4px, 1vw, 6px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: var(--secondary);
+
+    z-index: -1;
+}
+
+.active {
+    text-decoration: underline;
+    color: var(--primary);
+}
+
+#about-image {
+    margin-top: 30px;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+p {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    line-height: 1.5em;
+    text-align: justify;
+    font-weight: 400;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 100%;
+    margin-top: 40px;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+#bot-logo {
+    margin-top: 50px;
+}
+
+.link {
+    color: #fff;
+    font-weight: 400;
+    font-size: inherit;
+
+    transition: color 0.1s;
+    position: relative;
+
+    margin-right: 16px;
+}
+.link::after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 7px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("/static/link.png") no-repeat;
+    background-position: top right;
+}
+.link:hover::after {
+    filter: brightness(0.5);
+}
+
+@media (max-width: 800px) {
+    .flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

@@ -1,0 +1,95 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 50px max(calc((100% - 50rem) / 2), 25px) 100px
+        max(calc((100% - 50rem) / 2), 25px);
+}
+
+h1 {
+    color: var(--primary);
+    font-size: clamp(3rem, 9vw, 4.5rem);
+    font-weight: 700;
+
+    -webkit-text-stroke-width: clamp(2px, 0.6vw, 3px);
+    -webkit-text-stroke-color: black;
+
+    position: relative;
+    display: inline;
+    text-align: center;
+
+    line-height: 0.9em;
+
+    z-index: 1;
+}
+h1::before {
+    content: "Upcoming Shows";
+    text-align: center;
+    white-space: pre;
+
+    position: absolute;
+    top: clamp(4px, 1vw, 6px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: var(--secondary);
+
+    z-index: -1;
+}
+
+main img {
+    margin-top: 30px;
+
+    max-width: 100%;
+}
+
+main table {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: none;
+    width: 100%;
+}
+
+main table th {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: var(--primary);
+    border-bottom: 1px solid var(--primary);
+}
+
+main table td {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+main table th,
+main table td {
+    padding: 10px;
+    text-align: left;
+
+    font-size: 1.3rem;
+}
+main table th:last-child,
+main table td:last-child {
+    text-align: right;
+}
+
+main table td:last-child {
+    text-decoration: underline;
+}
+
+main p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    font-size: 1.35rem;
+}
+
+.active {
+    text-decoration: underline;
+    color: var(--primary);
+}
