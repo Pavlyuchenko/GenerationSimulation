@@ -7,13 +7,30 @@
         <link rel="stylesheet" href="styles/index.css" />
         <link rel="stylesheet" href="styles/base.css" />
 
-        <link rel="icon" href="/static/gensim_logo.png" type="image/png" />
+        <link rel="icon" href="/static/gensim_logo.webp" type="image/webp" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&display=swap"
             rel="stylesheet"
+        />
+
+        <meta
+            name="description"
+            content="An Alt/Pop duo based in Austin, TX. Music, Videos, Tour Dates."
+        />
+        <meta property="og:title" content="Generation Simulation" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://generationsimulation.com" />
+        <meta
+            property="og:image"
+            content="https://generationsimulation.com/static/gensim_logo.webp"
+        />
+        <meta
+            property="og:description"
+            content="An Alt/Pop duo based in Austin,
+                TX. Music, Videos, Tour Dates."
         />
     </head>
     <body>
@@ -22,7 +39,7 @@
             <a href="/shows" class="active">Shows</a>
             <a href="/">
                 <img
-                    src="/static/gensim_logo_big.png"
+                    src="/static/gensim_logo_big.webp"
                     alt="Generation Simulation Logo"
                     width="120px"
                     height="120px"
@@ -42,12 +59,12 @@
             <div class="grid">
                 <div class="img-wrapper">
                     <img
-                        src="static/this_again.png"
+                        src="static/this_again.webp"
                         alt="Song Oh No Is It This Again?"
                     />
                     <div onClick="showPopUp(0)">
                         <img
-                            src="static/play.png"
+                            src="static/play.webp"
                             alt="Play Button"
                             class="play-button"
                         />
@@ -55,22 +72,22 @@
                 </div>
                 <div class="img-wrapper">
                     <img
-                        src="static/half_robotic.png"
+                        src="static/half_robotic.webp"
                         alt="Song Half Robotic"
                     />
                     <div onclick="showPopUp(1)">
                         <img
-                            src="static/play.png"
+                            src="static/play.webp"
                             alt="Play Button"
                             class="play-button"
                         />
                     </div>
                 </div>
                 <div class="img-wrapper">
-                    <img src="static/true_colors.png" alt="Song True Colors" />
+                    <img src="static/true_colors.webp" alt="Song True Colors" />
                     <div onclick="showPopUp(2)">
                         <img
-                            src="static/play.png"
+                            src="static/play.webp"
                             alt="Play Button"
                             class="play-button"
                         />
@@ -83,9 +100,10 @@
 
             <div class="flex">
                 <img
-                    src="static/make_your_point.png"
+                    src="static/make_your_point.webp"
                     alt="Make Your Point cover"
                     width="400px"
+                    loading="lazy"
                 />
                 <div>
                     <a
@@ -93,9 +111,10 @@
                         target="_blank"
                     >
                         <img
-                            src="static/listenonspotify.png"
+                            src="static/listenonspotify.webp"
                             alt="Listen On Spotify"
                             width="200px"
+                            loading="lazy"
                         />
                     </a>
                     <a
@@ -103,9 +122,10 @@
                         target="_blank"
                     >
                         <img
-                            src="static/youtube_music.png"
+                            src="static/youtube_music.webp"
                             alt="Youtube Music"
                             width="200px"
+                            loading="lazy"
                         />
                     </a>
                     <a
@@ -113,9 +133,10 @@
                         target="_blank"
                     >
                         <img
-                            src="static/amazon_music.png"
+                            src="static/amazon_music.webp"
                             alt="Amazon Music"
                             width="200px"
+                            loading="lazy"
                         />
                     </a>
                     <a
@@ -126,6 +147,7 @@
                             src="static/apple_music.webp"
                             alt="Apple Music"
                             width="200px"
+                            loading="lazy"
                         />
                     </a>
                 </div>
@@ -145,9 +167,10 @@
             </div>
 
             <img
-                src="/static/gensim_no_bg.png"
+                src="/static/gensim_no_bg.webp"
                 alt="Generation Simulation logo"
                 id="bot-logo"
+                loading="lazy"
             />
         </main>
         <script>

@@ -172,7 +172,9 @@ h2::before {
     justify-content: space-between;
 
     margin-top: 30px;
-    padding: 0 500px;
+    padding: 0 clamp(10%, 35vw, 30%);
+
+    gap: 50px;
 }
 
 .flex div {
@@ -181,6 +183,8 @@ h2::before {
     align-items: center;
     justify-content: center;
     flex: 1;
+
+    min-width: 150px;
 
     gap: 20px;
 }
