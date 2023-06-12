@@ -75,5 +75,7 @@ h1::before {
 @media (max-width: 1000px) {
     #gallery {
         grid-template-columns: 1fr 1fr;
+
+        grid-gap: 20px;
     }
 }

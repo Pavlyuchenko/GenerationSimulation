@@ -10,7 +10,7 @@ main {
 
 h1 {
     color: var(--primary);
-    font-size: clamp(3rem, 9vw, 4.5rem);
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
     font-weight: 700;
 
     -webkit-text-stroke-width: clamp(2px, 0.6vw, 3px);
