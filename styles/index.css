@@ -111,6 +111,7 @@ main p {
 
 #bot-logo {
     margin-top: 100px;
+    margin-bottom: 50px;
 }
 
 #pop-up {
@@ -134,7 +135,7 @@ main p {
 
 h2 {
     color: var(--primary);
-    font-size: clamp(54px, 10vw, 80px);
+    font-size: clamp(45px, 8vw, 80px);
 
     -webkit-text-stroke-width: clamp(2.5px, 0.6vw, 3.5px);
     -webkit-text-stroke-color: black;
@@ -183,6 +184,9 @@ h2::before {
 
     gap: 20px;
 }
+.flex img {
+    max-width: 100%;
+}
 
 .flex a {
     transition: transform 0.2s;
@@ -225,11 +229,19 @@ h2::before {
     }
 
     .flex {
+        margin: 0 20px;
         padding: 0 20px;
         flex-direction: column;
         gap: 20px;
     }
     .flex div {
         gap: 10px;
+    }
+
+    h2 {
+        margin-top: 75px;
+    }
+    #new-single {
+        margin-bottom: 10px;
     }
 }
