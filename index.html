@@ -53,8 +53,46 @@
             <a href="/about">About</a>
         </nav>
         <main>
-            <h1>GENERATION<br />SIMULATION</h1>
-            <p>Alt/Pop duo based in Austin, TX</p>
+            <div id="title-div">
+                <h1>GENERATION<br />SIMULATION<br /></h1>
+                <div id="bannah-div">
+                    <!-- On click scroll smoothly to #routines-div  -->
+                    <img
+                        src="static/bannah.webp"
+                        alt="Stylistic banner"
+                        id="bannah"
+                        onclick="document.getElementById('routines').scrollIntoView({behavior: 'smooth'});"
+                    />
+                    <p
+                        id="routines-callout"
+                        onclick="document.getElementById('routines').scrollIntoView({behavior: 'smooth'});"
+                    >
+                        New album Routines coming August 18th!
+                    </p>
+                </div>
+            </div>
+            <p id="band-desc">Alt/Pop duo based in Austin, TX</p>
+
+            <section id="routines-div">
+                <div class="flex" id="routines">
+                    <img
+                        src="static/routines_cover.webp"
+                        alt="Make Your Point cover"
+                        width="1000px"
+                        loading="lazy"
+                    />
+                    <div id="routines-text">
+                        <h3>Routines</h3>
+                        <p>new album available August 18, 2023</p>
+                        <a
+                            href="https://distrokid.com/hyperfollow/generationsimulation/routines"
+                            target="_blank"
+                        >
+                            Pre-Save
+                        </a>
+                    </div>
+                </div>
+            </section>
 
             <div class="grid">
                 <div class="img-wrapper">
@@ -94,67 +132,6 @@
                     </div>
                 </div>
             </div>
-
-            <h2 data-alttext="Make Your Point">Make Your Point</h2>
-            <p id="new-single">New Single - Out Now!</p>
-
-            <div class="flex">
-                <img
-                    src="static/make_your_point.webp"
-                    alt="Make Your Point cover"
-                    width="400px"
-                    loading="lazy"
-                />
-                <div>
-                    <a
-                        href="https://open.spotify.com/track/6lxMY6yvXze9s1mFL6mIfk?si=0c08f66834724fd6"
-                        target="_blank"
-                    >
-                        <img
-                            src="static/listenonspotify.webp"
-                            alt="Listen On Spotify"
-                            width="200px"
-                            loading="lazy"
-                        />
-                    </a>
-                    <a
-                        href="https://music.youtube.com/watch?v=3mgQDqpbEkw&feature=share"
-                        target="_blank"
-                    >
-                        <img
-                            src="static/youtube_music.webp"
-                            alt="Youtube Music"
-                            width="200px"
-                            loading="lazy"
-                        />
-                    </a>
-                    <a
-                        href="https://music.amazon.com/albums/B0C1316DDV?marketplaceId=A3K6Y4MI8GDYMT&musicTerritory=BE&ref=dm_sh_HPLhkbAC0EGLcjzQZt573XW5h&trackAsin=B0C12NQDJ7"
-                        target="_blank"
-                    >
-                        <img
-                            src="static/amazon_music.webp"
-                            alt="Amazon Music"
-                            width="200px"
-                            loading="lazy"
-                        />
-                    </a>
-                    <a
-                        href="https://music.apple.com/us/album/make-your-point/1680184462?i=1680184463"
-                        target="_blank"
-                    >
-                        <img
-                            src="static/apple_music.webp"
-                            alt="Apple Music"
-                            width="200px"
-                            loading="lazy"
-                        />
-                    </a>
-                </div>
-            </div>
-
-            <h2 data-alttext="Upcoming Shows">Upcoming Shows</h2>
-            <p>No upcoming shows...</p>
 
             <div id="pop-up">
                 <iframe

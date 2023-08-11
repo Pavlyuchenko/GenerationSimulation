@@ -3,12 +3,15 @@ import os
 
 PATH = "./static/"
 PATH_NEW = "./static/compressed/"
-IMAGE_DIMENSIONS = (13, 13)
+IMAGE_DIMENSIONS = (1200, 1200)
 
 filenames = os.listdir(PATH)
 
 
 for file in filenames:
+    if file != "routines_cover.jpeg":
+        continue
+
     if os.path.isdir(PATH + file):
         continue
 

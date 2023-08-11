@@ -1,5 +1,5 @@
 :root {
-    --background: #0b1522;
+    --background: #1a1320;
     --primary: #b13830;
     --secondary: #dd671f;
 }
@@ -16,6 +16,9 @@ body {
     background-color: var(--background);
 
     color: #fff;
+
+    /* scroll smoothly */
+    scroll-behavior: smooth;
 }
 
 nav {
